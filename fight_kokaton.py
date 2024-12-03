@@ -173,7 +173,7 @@ def main():
                 if beam.rct.colliderect(bomb.rct): #ビームが爆弾を打ち落としたら
                     beam = None
                     bombs[i] = None
-                    bird.change_img(6,screen)
+                    bird.change_img(6,screen) #打ち落としたら喜ぶ
                     pg.display.update()
 
         key_lst = pg.key.get_pressed()
