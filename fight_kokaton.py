@@ -165,9 +165,10 @@ class Explosion:
     def update(self, screen: pg.Surface):
         self.life -= 1
         if self.life > 0:
+            ind = (self.life // 10)%2
             self.img_idx = (self.img_idx + 1) % len(self.images)
             self.image = self.images[self.img_idx]
-            screen.blit(self.image, self.rct)
+            screen.blit(self.images[ind], self.rct)
             return True
         return False
     
